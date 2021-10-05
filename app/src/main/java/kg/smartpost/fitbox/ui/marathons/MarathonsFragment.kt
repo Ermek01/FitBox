@@ -1,0 +1,44 @@
+package kg.smartpost.fitbox.ui.marathons
+
+import android.content.Intent
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import kg.smartpost.fitbox.databinding.FragmentMarathonsBinding
+import kg.smartpost.fitbox.ui.activities.MarathonActivity
+import kg.smartpost.fitbox.ui.marathons.adapter.OtherAdapter
+
+class MarathonsFragment : Fragment() {
+
+    private var _binding: FragmentMarathonsBinding? = null
+    private val binding: FragmentMarathonsBinding get() = _binding!!
+
+    private lateinit var otherAdapter: OtherAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentMarathonsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        otherAdapter = OtherAdapter(requireContext())
+        binding.recyclerOther.adapter = otherAdapter
+
+        binding.btnMore.setOnClickListener {
+            startActivity(Intent(requireContext(), MarathonActivity::class.java))
+        }
+
+    }
+
+}

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ellipse5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/img_profile"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Иван Иванов"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="+7 (999) 999-99-99"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="fitboxapp@yandex.ru"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_profile"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Настройки"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_news"
+                android:layout_marginTop="31dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/img_profile_icon"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_profile_edit" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Редактировать профиль"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_profile_icon"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_edit_profile"
+                        android:layout_below="@id/txt_edit_profile"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_account"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_account" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Аккаунт"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_account"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_account"
+                        android:layout_below="@id/txt_account"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_notification"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_notification" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Уведомления"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_notification"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_notification"
+                        android:layout_below="@id/txt_notification"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_confidentiality"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_privacy" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_confidentiality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Конфиденциальность"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_confidentiality"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_confidentiality"
+                        android:layout_below="@id/txt_confidentiality"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_create_trainings"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_traiinings_create" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_create_trainings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Создать свою программу тренировок"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_create_trainings"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_create_trainings"
+                        android:layout_below="@id/txt_create_trainings"
+
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Узнать больше"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_support"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_support" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Поддержка и обратная связь"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_support"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_support"
+                        android:layout_below="@id/txt_support"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_instagram"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_instagram" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Присоединиться в Instagram"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_instagram"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_instagram"
+                        android:layout_below="@id/txt_instagram"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/img_privacy_policy"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ellipse">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_privacy_policy" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_privacy_policy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:text="Политика конфиденциальности"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@id/img_privacy_policy"
+                        android:layout_centerVertical="true"
+                        android:textFontWeight="400"
+                        android:layout_marginStart="20dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#B3FFFFFF"
+                        android:layout_marginTop="14dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignStart="@id/txt_privacy_policy"
+                        android:layout_below="@id/txt_privacy_policy"
+
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

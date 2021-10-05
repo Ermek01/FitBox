@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?colorPrimary"
+    tools:context=".ui.trainings.MuscleFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+                android:textSize="15sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ДЕЛЬТЫ"
+                android:layout_below="@id/txt_desc"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="600"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="14dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Смотреть все"
+                android:layout_below="@id/txt_desc"
+                android:textColor="#5282FF"
+                android:textSize="15sp"
+                android:layout_marginEnd="14dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="14dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:text="Выберите с чем вы хотите тренироваться"
+                android:textSize="15sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_name"
+                android:layout_marginTop="25dp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="?colorPrimary"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/txt_select"
+                app:tabTextColor="#80FFFFFF" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tab_layout"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

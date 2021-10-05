@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_nav_graph"
+    app:startDestination="@id/shopFragment">
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="kg.smartpost.fitbox.ui.shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="kg.smartpost.fitbox.ui.cart.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
+</navigation>

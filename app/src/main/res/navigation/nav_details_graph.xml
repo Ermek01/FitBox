@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_details_graph"
+    app:startDestination="@id/workoutFragment">
+
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="kg.smartpost.fitbox.ui.trainings.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" />
+    <fragment
+        android:id="@+id/workoutWithFitboxFragment"
+        android:name="kg.smartpost.fitbox.ui.trainings.WorkoutWithFitboxFragment"
+        android:label="fragment_workout_with_fitbox"
+        tools:layout="@layout/fragment_workout_with_fitbox" />
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="kg.smartpost.fitbox.ui.trainings.WorkoutDetailFragment"
+        android:label="fragment_workout_detail"
+        tools:layout="@layout/fragment_workout_detail" />
+    <fragment
+        android:id="@+id/startTrainingFragment"
+        android:name="kg.smartpost.fitbox.ui.trainings.StartTrainingFragment"
+        android:label="fragment_start_training"
+        tools:layout="@layout/fragment_start_training" />
+    <fragment
+        android:id="@+id/workoutCompletedFragment"
+        android:name="kg.smartpost.fitbox.ui.trainings.WorkoutCompletedFragment"
+        android:label="fragment_workout_completed"
+        tools:layout="@layout/fragment_workout_completed" />
+</navigation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?colorPrimary"
+    tools:context=".ui.trainings.StartTrainingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:focusable="false"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/img_workout" />
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_cancel" />
+
+            <RelativeLayout
+                android:id="@+id/btn_again"
+                android:layout_width="311dp"
+                android:layout_height="48dp"
+                android:background="@drawable/frame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="93dp"
+                android:layout_below="@id/product_image">
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Повторить упражнение"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_next"
+                android:layout_width="311dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_button_next"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:layout_below="@id/btn_again">
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Следующие упражнение"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

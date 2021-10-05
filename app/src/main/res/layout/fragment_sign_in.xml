@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.start.SignInFragment">
+
+    <LinearLayout
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="94dp"
+            android:layout_height="28dp"
+            android:src="@drawable/fitbox" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_ellipse" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse_back"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/logo">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_back"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Зарегистрируйся"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textSize="28sp"
+                    android:layout_marginTop="20dp"
+                    android:textFontWeight="700"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:layout_marginTop="46dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Зарегистрироваться через Facebook"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:textFontWeight="700"
+                        android:textColor="@color/black"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_google"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Зарегистрироваться через Google"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:textFontWeight="700"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_apple"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Продолжить через Apple"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:textFontWeight="700"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Ничего не публикуется без Вашего согласия"
+                    android:layout_marginTop="12dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/btn_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_button_next"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="115dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:text="Зарегистрироваться через E-mail"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:textSize="18sp"
+                        android:textFontWeight="700"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_create_account"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textFontWeight="400"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Мы используем Ваш адрес электронной почты для \n того, чтобы время от времени присылать Вам \n информацию об обновлениях и маркетинговые \n материалы. Если вы не хотите получать такие \n письма, то можете в любой момент поменять в \n настройках"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textFontWeight="400"
+                    android:layout_marginTop="71dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="34dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.activities.OrderingActivity">
+
+    <TextView
+        android:id="@+id/txt_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Оформление заказа"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="28sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/sf_ui_display"/>
+
+    <RelativeLayout
+        android:id="@+id/img_shop"
+        android:layout_width="134dp"
+        android:layout_height="102dp"
+        android:layout_below="@id/txt_cart"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/radius_relative_layout"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_workout"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Трансформация тела за 12 недель"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/img_shop"
+        android:layout_alignTop="@id/img_shop"
+        android:fontFamily="@font/sf_ui_display"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@id/img_shop"
+        android:layout_toEndOf="@id/img_shop"
+        android:gravity="bottom|end">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="14dp">
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 000₽"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textSize="10sp"
+                android:textAlignment="textEnd"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_alignStart="@id/discount"
+                android:layout_alignEnd="@id/discount"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 990₽"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="400"
+            android:textSize="22sp"
+            android:layout_marginEnd="6dp"
+            android:layout_alignBottom="@id/img_shop"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="13dp"
+        android:layout_below="@id/img_shop"
+        android:paddingTop="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Данные участника"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="20sp"
+                android:fontFamily="@font/sf_ui_display"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:hint="Имя"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#B3FFFFFF"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                android:backgroundTint="#59FFFFFF"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="E-mail"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#B3FFFFFF"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                android:backgroundTint="#59FFFFFF"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Телефон"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#B3FFFFFF"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                android:backgroundTint="#59FFFFFF"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Рост"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#B3FFFFFF"
+                android:textSize="12sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:backgroundTint="#59FFFFFF"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Вес"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#B3FFFFFF"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="12sp"
+                android:textFontWeight="400"
+                android:backgroundTint="#59FFFFFF"
+                />
+
+            <TextView
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_create_questionnaire"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                android:layout_marginTop="25dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_alignParentBottom="true"
+        android:background="#AFAFAF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Итого к оплате 8 990₽"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="20sp"
+            android:textFontWeight="600"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20sp">
+
+            <RelativeLayout
+                android:layout_width="185dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_button_next">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Оплатить картой"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textSize="18sp"
+                    android:textFontWeight="600"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="185dp"
+                android:layout_height="38dp"
+                android:background="@drawable/radius_relative_layout"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/txt_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="Оплатить с"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:textSize="18sp"
+                    android:textFontWeight="600"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_apple_pay_"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/txt_pay"
+                    android:layout_marginStart="5dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

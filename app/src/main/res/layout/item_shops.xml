@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?colorPrimary"
+    android:layout_marginBottom="25dp">
+
+    <RelativeLayout
+        android:id="@+id/img_shop"
+        android:layout_width="134dp"
+        android:layout_height="276dp"
+        android:background="@drawable/radius_relative_layout">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_shop"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            app:tabBackground="@drawable/tab_selector_inset"
+            app:tabIndicatorHeight="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            app:tabMinWidth="50dp"
+            android:clipToPadding="false"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_shop"
+        android:text="Тренажер Fitbox"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textFontWeight="600"
+        android:fontFamily="@font/sf_ui_display"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_shop"
+        android:text="@string/txt_fitbox_desc"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textFontWeight="400"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sf_ui_display"
+        android:layout_below="@id/txt_name"
+        android:layout_marginStart="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/btn_add_cart"
+        android:layout_width="139dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_button_next"
+        android:layout_toEndOf="@id/img_shop"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@id/img_shop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В корзину"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/btn_add_cart"
+        android:text="8 990₽"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_ui_display"
+        android:textFontWeight="400"
+        android:textSize="22sp"
+        android:layout_alignBottom="@id/btn_add_cart"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@id/btn_add_cart"
+        />
+
+</RelativeLayout>

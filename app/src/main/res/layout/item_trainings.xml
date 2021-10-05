@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="319dp"
+    android:layout_height="196dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="?colorPrimary"
+    android:layout_marginEnd="21dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_trainings"
+        >
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Легкая тренировка дельт"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="600"
+            android:textSize="22sp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Длительность 25 минут"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="400"
+            android:textSize="12sp"
+            android:layout_below="@id/txt_name"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Начать"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            android:layout_above="@id/view"
+            android:layout_marginTop="10dp"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="99dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

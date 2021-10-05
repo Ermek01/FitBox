@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:paddingBottom="10dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:src="@drawable/img_all"/>
+
+        <TextView
+            android:id="@+id/txt_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="ПЛАТНАЯ ПРОГРАММА"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="400"
+            android:textSize="12sp"
+            android:layout_marginStart="17dp"
+            android:background="#5282FF"/>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="28 дней спорта"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="700"
+            android:textSize="22sp"
+            android:layout_below="@id/txt_free"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:text="Попробуй эту программу для тех, кто хочет сделать спорт привычкой"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_ui_display"
+            android:textFontWeight="400"
+            android:textSize="12sp"
+            android:layout_below="@id/txt_name"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

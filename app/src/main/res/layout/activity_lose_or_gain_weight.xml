@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    tools:context=".ui.activities.LoseOrGainWeightActivity">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:focusable="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_nutrition_1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/product_image">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Похудеть или набрать"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/news_dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="600"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/news_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Калькулятор ИМТ"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:stretchMode="columnWidth">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/edit">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@color/white"
+                        android:buttonTint="@color/white"
+                        android:inputType="number"
+                        android:text="175"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8C020202"
+                        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Рост (СМ)"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/edit">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@color/white"
+                        android:inputType="textPersonName"
+                        android:text="75"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8C020202"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Вес (КГ)"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="311dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_button_calculate">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Рассчитать"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/news_title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Калькулятор нормы потребления калорий"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="17dp"
+                            android:buttonTint="@color/white"
+                            android:shadowColor="#FFFFFF"
+                            android:text="Мужчина"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_blue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:buttonTint="@color/white"
+                            android:text="Женщина"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white"
+                            android:textSize="15sp" />
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center_vertical"
+                        android:text="Возраст:"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName3"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:background="?colorPrimary"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="70dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:stretchMode="columnWidth">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/edit">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@color/white"
+                        android:inputType="number"
+                        android:text="175"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8C020202"
+                        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Рост (СМ)"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/edit">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@color/white"
+                        android:inputType="textPersonName"
+                        android:text="75"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8C020202"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Вес (КГ)"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="311dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="34dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_button_calculate">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Рассчитать"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

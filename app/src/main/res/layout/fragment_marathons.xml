@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?colorPrimary"
+    tools:context=".ui.marathons.MarathonsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_marathon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Марафоны"
+                android:textFontWeight="700"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="28sp"
+                android:layout_marginStart="17dp"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_marathon">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_trainings_marathon"/>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="223dp"
+                    android:layout_height="wrap_content"
+                    android:text="Трансформация тела за 12 недель"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="28sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="14dp"/>
+
+                <TextView
+                    android:id="@+id/txt_desc"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:text="Программа тренировок для отличного тела"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    android:layout_below="@id/txt_name"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="2dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/btn_more"
+                    android:layout_width="139dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/bg_button_next"
+                    android:layout_below="@id/txt_desc"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Подробнее"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/sf_ui_display"
+                        android:textFontWeight="400"
+                        android:textColor="@color/white"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Другие программы"
+                android:textFontWeight="600"
+                android:fontFamily="@font/sf_ui_display"
+                android:textSize="20sp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/img"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_other"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txt_other"
+                tools:listitem="@layout/item_other_programs"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

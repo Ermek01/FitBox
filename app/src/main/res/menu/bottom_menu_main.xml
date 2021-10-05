@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feedFragment"
+        android:icon="@drawable/ic_tape"
+        android:title="Лента" />
+
+    <item
+        android:id="@+id/trainingsFragment"
+        android:icon="@drawable/ic_dumbbell"
+        android:title="Тренировки" />
+
+    <item
+        android:id="@+id/marathonsFragment"
+        android:icon="@drawable/ic_alarm"
+        android:title="Марафоны" />
+
+    <item
+        android:id="@+id/nutritionFragment"
+        android:icon="@drawable/ic_nutrition"
+        android:title="Питание" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="Профиль" />
+
+</menu>

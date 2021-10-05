@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FitBox</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_create_account">Создавая учетную запись, я принимаю <br></br> <u>Условия использования</u>  и <u>Политика <br></br> конфиденциальности</u>  FITBOX</string>
+    <string name="txt_create_questionnaire"> Заполняя анкету, я принимаю <u>Условия использования</u> и <u>Политика конфиденциальности</u> FITBOX</string>
+    <string name="txt_fitbox_desc">Fitbox – функциональный плиобокс, универсальный тренировочный снаряд весом 8кг для выполнения различных физических упражнений. Направлен на улучшение физической формы, развития силы и выносливости организма. <br></br> <br></br> С fitbox можно выполнять изолированные, многосуставные и функциональные упражнения. Более 100 упражнений сделают тренировки эффективными и разнообразным.</string>
+</resources>
