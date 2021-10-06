@@ -7,43 +7,42 @@
     android:background="?colorPrimary"
     tools:context=".ui.activities.NewsActivity">
 
-    <ImageView
-        android:id="@+id/product_image"
-        android:layout_width="match_parent"
-        android:layout_height="314dp"
-        android:focusable="false"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/img_workout" />
-
-    <ImageView
-        android:id="@+id/btn_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_cancel"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="25dp"/>
-
-    <TextView
-        android:id="@+id/news_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/sf_ui_display"
-        android:text="Все об fitbox"
-        android:layout_below="@id/product_image"
-        android:textColor="@color/white"
-        android:textFontWeight="600"
-        android:textSize="28sp" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/news_title"
         android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="314dp"
+                android:focusable="false"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/img_workout" />
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_cancel"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sf_ui_display"
+                android:text="Все об fitbox"
+                android:layout_below="@id/product_image"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/news_dates"
@@ -55,6 +54,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="600"
+                android:layout_below="@id/news_title"
                 android:fontFamily="@font/sf_ui_display"
                 android:text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
                 android:textColor="@color/white"

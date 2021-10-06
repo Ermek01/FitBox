@@ -95,7 +95,7 @@
                     android:layout_width="8dp"
                     android:layout_height="8dp"
                     android:layout_gravity="bottom"
-                    android:src="@drawable/ic_ellipse" />
+                    app:srcCompat="@drawable/ic_ellipse" />
 
             </LinearLayout>
 
@@ -103,7 +103,7 @@
                 android:id="@+id/btn_shop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_shop"
+                app:srcCompat="@drawable/ic_shop"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"/>
@@ -135,8 +135,8 @@
         android:layout_width="match_parent"
         android:layout_height="96dp"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="#AFAFAF"
+        android:background="@color/bg_bottom_selected"
+        app:itemBackground="@drawable/selector_bg_bottom"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemTextColor="@color/bottom_nav_selector"

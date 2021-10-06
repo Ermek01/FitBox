@@ -7,6 +7,8 @@
     android:background="?colorPrimary"
     tools:context=".ui.trainings.TrainingsFragment">
 
+
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
@@ -18,6 +20,13 @@
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
         android:layout_marginTop="15dp"
         app:tabTextColor="#80FFFFFF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8CFFFFFF"
+        android:layout_alignBottom="@id/tab_layout"
+        android:layout_marginBottom="0.5dp"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

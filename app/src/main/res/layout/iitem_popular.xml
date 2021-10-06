@@ -12,6 +12,11 @@
             android:background="@drawable/img_all"
             >
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#73000000"/>
+
             <TextView
                 android:id="@+id/all"
                 android:layout_width="wrap_content"

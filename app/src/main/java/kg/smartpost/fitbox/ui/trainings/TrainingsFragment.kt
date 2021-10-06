@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kg.smartpost.fitbox.databinding.FragmentTrainingsBinding
+
 import kg.smartpost.fitbox.ui.trainings.adapter.MainTabAdapter
 
 class TrainingsFragment : Fragment() {

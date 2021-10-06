@@ -1,64 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimary"
     tools:context=".ui.profile.ProfileFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_profile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ellipse5" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="15dp"
-        android:layout_toEndOf="@id/img_profile"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sf_ui_display"
-            android:text="Иван Иванов"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/sf_ui_display"
-            android:text="+7 (999) 999-99-99"
-            android:textColor="@color/white"
-            android:textFontWeight="400"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:fontFamily="@font/sf_ui_display"
-            android:text="fitboxapp@yandex.ru"
-            android:textColor="@color/white"
-            android:textFontWeight="400"
-            android:textSize="12sp" />
-
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/img_profile"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="25dp"
         android:paddingBottom="10dp"
         >
 
@@ -66,13 +18,61 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ellipse5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/img_profile"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="Иван Иванов"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="+7 (999) 999-99-99"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/sf_ui_display"
+                    android:text="fitboxapp@yandex.ru"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/txt_news"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sf_ui_display"
                 android:text="Настройки"
+                android:layout_marginTop="25dp"
                 android:textColor="@color/white"
+                android:layout_below="@id/img_profile"
                 android:textFontWeight="600"
                 android:textSize="20sp" />
 
@@ -99,7 +99,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_profile_edit" />
+                            app:srcCompat="@drawable/ic_profile_edit" />
 
                     </RelativeLayout>
 
@@ -119,7 +119,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -154,7 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_account" />
+                            app:srcCompat="@drawable/ic_account" />
 
                     </RelativeLayout>
 
@@ -174,7 +174,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -209,7 +209,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_notification" />
+                            app:srcCompat="@drawable/ic_notification" />
 
                     </RelativeLayout>
 
@@ -229,7 +229,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -264,7 +264,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_privacy" />
+                            app:srcCompat="@drawable/ic_privacy" />
 
                     </RelativeLayout>
 
@@ -284,7 +284,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -319,7 +319,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_traiinings_create" />
+                            app:srcCompat="@drawable/ic_traiinings_create" />
 
                     </RelativeLayout>
 
@@ -339,7 +339,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -385,7 +385,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_support" />
+                            app:srcCompat="@drawable/ic_support" />
 
                     </RelativeLayout>
 
@@ -405,7 +405,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -440,7 +440,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_instagram" />
+                            app:srcCompat="@drawable/ic_instagram" />
 
                     </RelativeLayout>
 
@@ -460,7 +460,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"
@@ -495,7 +495,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/ic_privacy_policy" />
+                            app:srcCompat="@drawable/ic_privacy_policy" />
 
                     </RelativeLayout>
 
@@ -515,7 +515,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_right"
+                        app:srcCompat="@drawable/ic_arrow_right"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="13dp"

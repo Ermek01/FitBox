@@ -19,7 +19,7 @@ class NutritionFragment : Fragment(), NutritionAdapter.NutritionClickListener {
 
     private lateinit var nutritionAdapter: NutritionAdapter
 
-    val titles = arrayListOf<String>("Похудеть или набрать", "Примеры рационов", "Заказать индивидуальну программу питания")
+    val titles = arrayListOf<String>("Похудеть или набрать", "Примеры рационов", "Заказать индивидуальную программу питания")
     val desc = arrayListOf<String>(
         "Теоритическая часть по снижению или набору веса и калькуляторы индекса массы тела и рассчета каллорий.",
         "Рассмотрите варианты рационов питания по каллорийности и Вашим показателям.",

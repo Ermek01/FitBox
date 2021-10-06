@@ -10,32 +10,73 @@
         android:layout_height="266dp"
         android:layout_marginTop="26dp"/>
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
         android:layout_below="@id/img"
-        android:layout_marginTop="60dp"
-        android:textSize="25sp"
-        android:fontFamily="@font/sf_ui_display"
-        android:textFontWeight="700"
-        android:textColor="@color/white"
-        />
-
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="24dp"
-        android:layout_below="@id/title"
-        android:layout_marginTop="25dp"
-        android:textSize="18sp"
-        android:fontFamily="@font/sf_ui_display"
-        android:textFontWeight="400"
-        android:textColor="@color/white"
-        />
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"/>
+
+        <ImageView
+            android:id="@+id/imgRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="60dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="700"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="24dp"
+                android:layout_below="@id/title"
+                android:layout_marginTop="25dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_ui_display"
+                android:textFontWeight="400"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
 
 </RelativeLayout>

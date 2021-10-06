@@ -8,10 +8,18 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import kg.smartpost.fitbox.R
 
-class PagerAdapter: PagerAdapter() {
+class PagerAdapter : PagerAdapter() {
 
-    private val titles = arrayOf("Всё что тебе необходимо для эффективных домашних тренировок", "Более 300 упражнений и бесплатные программы тренировок под разные цели и задачи", "Начни тренироваться дома вместе с fitbox")
-    private val descriptions = arrayOf("Мы объединили все самые важные и нужные тренировочные снаряды, которые позволят тебе тренироваться максимально разнообразно и эффективно  ", "С fitbox ты можешь похудеть, проработать отстающие мышечные группы, развить силу и выносливость, улучшить физическую форму, все тренировки и программы имеют 3 уровня сложности и подойдут как новичкам, так и опытным атлетам", "Управляй своим временем, тренируйся когда тебе удобно не выходя из дома, экономь свое время и деньги, ставь цель, выбирай тренировочную программу и начинай работать на результат!")
+    private val titles = arrayOf(
+        "Всё что тебе необходимо для эффективных домашних тренировок",
+        "Более 300 упражнений и бесплатные программы тренировок под разные цели и задачи",
+        "Начни тренироваться дома вместе с fitbox"
+    )
+    private val descriptions = arrayOf(
+        "Мы объединили все самые важные и нужные тренировочные снаряды, которые позволят тебе тренироваться максимально разнообразно и эффективно  ",
+        "С fitbox ты можешь похудеть, проработать отстающие мышечные группы, развить силу и выносливость, улучшить физическую форму, все тренировки и программы имеют 3 уровня сложности и подойдут как новичкам, так и опытным атлетам",
+        "Управляй своим временем, тренируйся когда тебе удобно не выходя из дома, экономь свое время и деньги, ставь цель, выбирай тренировочную программу и начинай работать на результат!"
+    )
     private val drawables =
         intArrayOf(R.drawable.onboard_page1, R.drawable.onboard_page2, R.drawable.onboard_page3)
 
@@ -33,6 +41,47 @@ class PagerAdapter: PagerAdapter() {
         val textTitle = view.findViewById<TextView>(R.id.title)
         val textDesc = view.findViewById<TextView>(R.id.desc)
         val imageView = view.findViewById<ImageView>(R.id.img)
+        val imgLeft = view.findViewById<ImageView>(R.id.imgLeft)
+        val imgCenter = view.findViewById<ImageView>(R.id.imgCenter)
+        val imgRight = view.findViewById<ImageView>(R.id.imgRight)
+
+        when (position) {
+
+            0 -> {
+                val drawables =
+                    intArrayOf(
+                        R.drawable.ic_selected_indicator_left,
+                        R.drawable.ic_default_indicator_center,
+                        R.drawable.ic_default_indicator_right
+                    )
+                imgLeft.setImageResource(drawables[0])
+                imgCenter.setImageResource(drawables[1])
+                imgRight.setImageResource(drawables[2])
+            }
+            1 -> {
+                val drawables =
+                    intArrayOf(
+                        R.drawable.ic_default_indicator_left,
+                        R.drawable.ic_selected_indicator_center,
+                        R.drawable.ic_default_indicator_right
+                    )
+                imgLeft.setImageResource(drawables[0])
+                imgCenter.setImageResource(drawables[1])
+                imgRight.setImageResource(drawables[2])
+            }
+            2 -> {
+                val drawables =
+                    intArrayOf(
+                        R.drawable.ic_default_indicator_left,
+                        R.drawable.ic_default_indicator_center,
+                        R.drawable.ic_selected_indicator_right
+                    )
+                imgLeft.setImageResource(drawables[0])
+                imgCenter.setImageResource(drawables[1])
+                imgRight.setImageResource(drawables[2])
+            }
+
+        }
 
         textTitle.text = titles[position]
         textDesc.text = descriptions[position]

@@ -85,6 +85,13 @@
                 android:layout_below="@id/txt_select"
                 app:tabTextColor="#80FFFFFF" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8CFFFFFF"
+                android:layout_alignBottom="@id/tab_layout"
+                android:layout_marginBottom="0.5dp"/>
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"

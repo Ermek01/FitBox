@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +24,7 @@
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_gravity="bottom"
-            android:src="@drawable/ic_ellipse" />
+            app:srcCompat="@drawable/ic_ellipse" />
 
     </LinearLayout>
 
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_back"/>
+            app:srcCompat="@drawable/ic_back"/>
 
     </RelativeLayout>
 
@@ -81,7 +82,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_facebook"
+                        app:srcCompat="@drawable/ic_facebook"
                         android:layout_centerVertical="true"/>
 
                     <TextView
@@ -109,7 +110,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_google"
+                        app:srcCompat="@drawable/ic_google"
                         android:layout_centerVertical="true"/>
 
                     <TextView
@@ -135,8 +136,8 @@
                     android:layout_marginTop="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
                         android:src="@drawable/ic_apple"
                         android:layout_centerVertical="true"/>
 

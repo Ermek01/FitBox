@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -23,9 +23,6 @@
                 android:layout_height="314dp"
                 android:focusable="false"
                 android:scaleType="centerCrop"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/img_nutrition_1" />
 
             <TextView
@@ -33,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="17dp"
+                android:layout_below="@id/product_image"
                 android:fontFamily="@font/sf_ui_display"
                 android:text="Примеры рационов \n питания"
                 android:textColor="@color/white"
@@ -46,6 +44,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_marginTop="20dp"
                 android:foregroundGravity="right"
+                android:layout_below="@id/news_title"
                 android:background="?colorPrimary"
                 app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
                 app:tabGravity="start"
@@ -55,6 +54,13 @@
                 app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:tabTextColor="#80FFFFFF" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8CFFFFFF"
+                android:layout_alignBottom="@id/tabs_main"
+                android:layout_marginBottom="0.5dp"/>
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
@@ -62,7 +68,7 @@
                 android:layout_below="@+id/tabs_main"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </ScrollView>
 

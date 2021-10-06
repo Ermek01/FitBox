@@ -8,6 +8,8 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
@@ -21,14 +23,19 @@ class SplashFragment : Fragment() {
     private var _binding: FragmentSplashBinding? = null
     private val binding: FragmentSplashBinding get() = _binding!!
 
+    private lateinit var animation: Animation
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        animation = AnimationUtils.loadAnimation(requireContext(), R.anim.loading)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -36,8 +43,9 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.progress.startAnimation(animation)
+
         Handler(Looper.getMainLooper()).postDelayed({
-            /* Create an Intent that will start the Menu-Activity. */
             val navOptions = NavOptions.Builder().setPopUpTo(R.id.splashFragment, true).build()
             findNavController().navigate(R.id.onBoardFragment, null, navOptions)
         }, 3000)

@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_bottom">#5282FF</color>
     <color name="bg_bottom_selected">#AFAFAF</color>
+    <color name="transparent">#00000000</color>
     <color name="w50">#808080</color>
 </resources>
