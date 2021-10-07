@@ -6,34 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import kg.smartpost.fitbox.R
 import kg.smartpost.fitbox.ui.activities.NewsActivity
 import kg.smartpost.fitbox.ui.feed.FeedFragment
 
-class NewsPagerAdapter(private val context: Context, private val feedFragment: FeedFragment): PagerAdapter() {
+class NewsPagerAdapter : RecyclerView.Adapter<NewsPagerAdapter.ViewHolderNews>() {
 
+    class ViewHolderNews(view: View) : RecyclerView.ViewHolder(view) {
 
-    override fun getCount(): Int {
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNews {
+        val itemView =
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_news, parent, false)
+        return ViewHolderNews(itemView)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolderNews, position: Int) {
+    }
+
+    override fun getItemCount(): Int {
         return 3
-    }
-
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view == `object`
-    }
-
-    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as View)
-    }
-
-    override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_news, container, false)
-
-        view.setOnClickListener {
-            context.startActivity(Intent(context, NewsActivity::class.java))
-        }
-        container.addView(view)
-        return view
     }
 
 

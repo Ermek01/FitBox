@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/banner_white"  android:state_checked="true" />
+    <item android:drawable="@drawable/bg_selected_item"  android:state_checked="true" />
     <item android:drawable="@color/bg_bottom_selected" android:state_checked="false" />
     <item android:drawable="@color/black" />
 </selector>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btn_item"
+    android:layout_width="wrap_content"
+    android:layout_height="96dp"
+    app:cardBackgroundColor="@color/bg_bottom_selected">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_tape" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тренировки"
+            android:textColor="#8C000000"
+            android:layout_below="@id/icon"
+            android:fontFamily="@font/sf_ui_display"
+            android:textSize="12sp"
+            android:layout_marginTop="13dp"
+            android:textFontWeight="400"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

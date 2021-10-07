@@ -4,28 +4,28 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import kg.smartpost.fitbox.R
 
-class PopularPagerAdapter(private val context: Context): PagerAdapter() {
+class PopularPagerAdapter : RecyclerView.Adapter<PopularPagerAdapter.ViewHolderNews>() {
 
+    class ViewHolderNews(view: View) : RecyclerView.ViewHolder(view) {
 
-    override fun getCount(): Int {
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNews {
+        val itemView =
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.iitem_popular, parent, false)
+        return ViewHolderNews(itemView)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolderNews, position: Int) {
+    }
+
+    override fun getItemCount(): Int {
         return 3
-    }
-
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view == `object`
-    }
-
-    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as View)
-    }
-
-    override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = LayoutInflater.from(context).inflate(R.layout.iitem_popular, container, false)
-        container.addView(view)
-        return view
     }
 
 

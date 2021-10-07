@@ -11,4 +11,6 @@
     <color name="bg_bottom_selected">#AFAFAF</color>
     <color name="transparent">#00000000</color>
     <color name="w50">#808080</color>
+    <color name="def_text_color_menu">#8C000000</color>
+    <color name="shadow_color">#5E000000</color>
 </resources>

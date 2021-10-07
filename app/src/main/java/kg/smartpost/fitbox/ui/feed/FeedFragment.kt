@@ -47,16 +47,11 @@ class FeedFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        newsAdapter = NewsPagerAdapter(requireContext(), this)
-        binding.viewPagerNews.adapter = newsAdapter
-        newsAdapter.notifyDataSetChanged()
-        binding.viewPagerNews.getChildAt(0)
-        binding.viewPagerNews.pageMargin = dpToPx(24)
+        newsAdapter = NewsPagerAdapter()
+        binding.recyclerView.adapter = newsAdapter
 
-        popularAdapter = PopularPagerAdapter(requireContext())
+        popularAdapter = PopularPagerAdapter()
         binding.viewPagerPopular.adapter = popularAdapter
-        popularAdapter.notifyDataSetChanged()
-        binding.viewPagerPopular.pageMargin = dpToPx(24)
     }
 
     fun dpToPx(dp: Int): Int {

@@ -6,67 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity">
 
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@id/nav_bottom_view">-->
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_above="@id/nav_bottom_view">-->
 
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/appname"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_marginStart="15dp"-->
-<!--                android:layout_marginTop="30dp">-->
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/appname"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:layout_marginStart="15dp"-->
+    <!--                android:layout_marginTop="30dp">-->
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/name_app"-->
-<!--                    />-->
+    <!--                <ImageView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:src="@drawable/name_app"-->
+    <!--                    />-->
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/ic_ellipse"-->
-<!--                    android:layout_gravity="bottom"-->
-<!--                    />-->
+    <!--                <ImageView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:src="@drawable/ic_ellipse"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    />-->
 
-<!--            </LinearLayout>-->
-
-
+    <!--            </LinearLayout>-->
 
 
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/recyclerView"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="190dp"-->
-<!--                tools:listitem="@layout/item_news"-->
-<!--                android:layout_marginStart="15dp"-->
-<!--                android:layout_below="@id/news_txt"/>-->
-
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/recyclerView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="190dp"-->
+    <!--                tools:listitem="@layout/item_news"-->
+    <!--                android:layout_marginStart="15dp"-->
+    <!--                android:layout_below="@id/news_txt"/>-->
 
 
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/recyclerView2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="190dp"-->
-<!--                tools:listitem="@layout/iitem_popular"-->
-<!--                android:layout_below="@id/txt_popular"-->
-<!--                android:layout_marginStart="15dp"/>-->
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/recyclerView2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="190dp"-->
+    <!--                tools:listitem="@layout/iitem_popular"-->
+    <!--                android:layout_below="@id/txt_popular"-->
+    <!--                android:layout_marginStart="15dp"/>-->
 
 
+    <!--        </RelativeLayout>-->
+
+    <!--    </ScrollView>-->
 
 
-
-<!--        </RelativeLayout>-->
-
-<!--    </ScrollView>-->
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -82,9 +77,9 @@
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="94dp"
@@ -103,43 +98,334 @@
                 android:id="@+id/btn_shop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_shop"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="15dp"/>
+                android:layout_marginEnd="15dp"
+                app:srcCompat="@drawable/ic_shop" />
 
         </RelativeLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <androidx.viewpager2.widget.ViewPager2-->
-<!--        android:id="@+id/view_pager"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@id/nav_bottom_view"-->
-<!--        android:layout_below="@id/appBar"-->
-<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
 
-    <fragment
-        android:id="@+id/nav_host_bottom"
+
+    <kg.smartpost.fitbox.ui.CustomViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/appBar"
-        android:layout_above="@id/nav_bottom_view"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/bottom_nav_bar"
-        android:name="androidx.navigation.fragment.NavHostFragment"/>
+        android:layout_above="@id/relative"
+        android:layout_below="@id/appBar" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_bottom_view"
+    <RelativeLayout
+        android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="96dp"
         android:layout_alignParentBottom="true"
         android:background="@color/bg_bottom_selected"
-        app:itemBackground="@drawable/selector_bg_bottom"
-        app:labelVisibilityMode="labeled"
-        app:itemIconTint="@color/bottom_nav_selector"
-        app:itemTextColor="@color/bottom_nav_selector"
-        app:menu="@menu/bottom_menu_main"/>
+        android:orientation="horizontal"
+        >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_btn_feed"
+        android:layout_width="76dp"
+        android:layout_height="96dp"
+        android:background="@drawable/bg_selected_left_item"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <ImageView
+            android:id="@+id/icon_tape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_tape_white" />
+
+        <TextView
+            android:id="@+id/txt_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_tape"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Лента"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_btn_training"
+        android:layout_width="79dp"
+        android:layout_height="96dp"
+        android:background="@color/bg_bottom_selected"
+        android:layout_toEndOf="@id/bg_btn_feed"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/icon_dumbbel"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_dumbbell" />
+
+        <TextView
+            android:id="@+id/txt_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_dumbbel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Тренировки"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_btn_marathon"
+        android:layout_width="79dp"
+        android:layout_height="96dp"
+        android:background="@color/bg_bottom_selected"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/icon_alarm"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_alarm" />
+
+        <TextView
+            android:id="@+id/txt_marathon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_alarm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Марафоны"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_btn_nutrition"
+        android:layout_width="79dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/bg_btn_marathon"
+        android:background="@color/bg_bottom_selected"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/icon_nutrition"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_nutrition" />
+
+        <TextView
+            android:id="@+id/txt_nutrition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_nutrition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Питание"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_profile"
+        android:layout_width="76dp"
+        android:layout_height="96dp"
+        android:background="@color/bg_bottom_selected"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/txt_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/sf_ui_display"
+            android:text="Профиль"
+            android:textAlignment="center"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bg_feed_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignEnd="@id/bg_btn_feed"
+        android:layout_alignStart="@id/bg_btn_feed"
+        android:layout_above="@id/bg_btn_feed"
+        android:background="@drawable/bg_top_menu_item"
+        android:layout_marginEnd="4.7dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bg_training_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignEnd="@id/bg_btn_training"
+        android:layout_alignStart="@id/bg_btn_training"
+        android:layout_above="@id/bg_btn_training"
+        android:background="@drawable/bg_top_menu_item"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bg_marathon_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignEnd="@id/bg_btn_marathon"
+        android:layout_alignStart="@id/bg_btn_marathon"
+        android:layout_above="@id/bg_btn_marathon"
+        android:background="@drawable/bg_top_menu_item"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bg_nutrition_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignEnd="@id/bg_btn_nutrition"
+        android:layout_alignStart="@id/bg_btn_nutrition"
+        android:layout_above="@id/bg_btn_nutrition"
+        android:background="@drawable/bg_top_menu_item"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bg_profile_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignEnd="@id/bg_profile"
+        android:layout_alignStart="@id/bg_profile"
+        android:layout_above="@id/bg_profile"
+        android:background="@drawable/bg_top_menu_item"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        />
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/view_menu"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="96dp"-->
+    <!--            android:layout_alignParentBottom="true"-->
+    <!--            android:background="@color/bg_bottom_selected"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:gravity="center_vertical|center_horizontal|bottom">-->
+
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/btn_training"-->
+    <!--                android:layout_width="69dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                >-->
+
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/btn_marathon"-->
+    <!--                android:layout_width="69dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                >-->
+
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/btn_nutrition"-->
+    <!--                android:layout_width="69dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                >-->
+
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/btn_profile"-->
+    <!--                android:layout_width="69dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                >-->
+
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_host_bottom"-->
+    <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_above="@id/nav_bottom_view"-->
+    <!--        android:layout_below="@id/appBar"-->
+    <!--        app:defaultNavHost="true"-->
+    <!--        app:navGraph="@navigation/bottom_nav_bar" />-->
+
+    <!--    <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView-->
+    <!--        android:id="@+id/bottomNavigationView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:menu="@menu/bottom_menu_main"-->
+    <!--        app:backgroundTint="@color/bg_bottom_selected"-->
+    <!--        app:morphCornerRadius="128dp"-->
+    <!--        app:morphItemRadius="64dp"-->
+    <!--        app:labelVisibilityMode="labeled"-->
+    <!--        app:itemBackground="@drawable/selector_bg_bottom"-->
+    <!--        app:itemIconTint="@color/bottom_nav_selector"-->
+    <!--        app:itemTextColor="@color/bottom_nav_selector"-->
+    <!--        app:morphVerticalOffset="8dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        />-->
 
 </RelativeLayout>
